@@ -2,6 +2,7 @@ import React from 'react';
 import Hello from './Hello';
 import { boolean, text, withKnobs } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
+import mdx from './Hello.mdx';
 
 export default {
   title: 'components/basic/Hello', // 스토리북에서 보여질 그룹과 경로
@@ -9,6 +10,9 @@ export default {
   decorators: [withKnobs], // 애드온 적용
   parameters: {
     componentSubtitle: '"안녕하세요" 컴포넌트',
+    docs: {
+      page: mdx,
+    },
   },
 };
 
